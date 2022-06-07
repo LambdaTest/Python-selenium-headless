@@ -4,8 +4,7 @@ If you want to set browser specific options for an automation test in Python-sel
 
 # Steps:
 
-You can specify the various browser specific options in the test file capabilities section. The following is an example on how to set Chrome specific options using chromeOptions in capabilties:
-
+You can run a test in headless mode by providing it as a capability in test file. The capabilities would look something like this:
 
 ```python
 desired_caps = {
@@ -14,9 +13,7 @@ desired_caps = {
                 "name": "Python Demo Test",  # Change your test name here
                 "platformName": "Windows 11",
                 "selenium_version": "4.0.0",
-                "chromeOptions" : {
-                "args" : ["incognito"]  # ChromeOption to start chrome in incognito mode
-                
+                "headless": True    
             },
             "browserName": "Chrome",
             "browserVersion": "98.0",
